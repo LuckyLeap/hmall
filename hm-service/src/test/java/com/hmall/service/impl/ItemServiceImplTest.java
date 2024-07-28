@@ -11,7 +11,7 @@ import java.time.Duration;
 import java.util.List;
 
 @SpringBootTest
-class ItemServiceImplTest {
+public class ItemServiceImplTest {
 
     @Autowired
     protected IItemService itemService;
