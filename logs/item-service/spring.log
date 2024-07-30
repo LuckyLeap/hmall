@@ -10979,3 +10979,46 @@ Caused by: com.alibaba.nacos.api.exception.NacosException: Client not connected,
 16:23:37:870 DEBUG 16892 --- [http-nio-8081-exec-9] c.h.i.mapper.ItemMapper.selectBatchIds   : ==>  Preparing: SELECT id,name,price,stock,image,category,brand,spec,sold,comment_count,isAD,status,create_time,update_time,creater,updater FROM item WHERE id IN ( ? )
 16:23:37:871 DEBUG 16892 --- [http-nio-8081-exec-9] c.h.i.mapper.ItemMapper.selectBatchIds   : ==> Parameters: 100000006163(Long)
 16:23:37:873 DEBUG 16892 --- [http-nio-8081-exec-9] c.h.i.mapper.ItemMapper.selectBatchIds   : <==      Total: 1
+17:05:07:885 DEBUG 19820 --- [http-nio-8084-exec-3] c.h.i.mapper.ItemMapper.selectBatchIds   : ==>  Preparing: SELECT id,name,price,stock,image,category,brand,spec,sold,comment_count,isAD,status,create_time,update_time,creater,updater FROM item WHERE id IN ( ? )
+17:05:07:888 DEBUG 19820 --- [http-nio-8084-exec-3] c.h.i.mapper.ItemMapper.selectBatchIds   : ==> Parameters: 100000006163(Long)
+17:05:07:902 DEBUG 19820 --- [http-nio-8084-exec-3] c.h.i.mapper.ItemMapper.selectBatchIds   : <==      Total: 1
+17:05:08:486 DEBUG 16892 --- [http-nio-8081-exec-1] c.h.i.mapper.ItemMapper.selectBatchIds   : ==>  Preparing: SELECT id,name,price,stock,image,category,brand,spec,sold,comment_count,isAD,status,create_time,update_time,creater,updater FROM item WHERE id IN ( ? )
+17:05:08:486 DEBUG 16892 --- [http-nio-8081-exec-1] c.h.i.mapper.ItemMapper.selectBatchIds   : ==> Parameters: 100000006163(Long)
+17:05:08:489 DEBUG 16892 --- [http-nio-8081-exec-1] c.h.i.mapper.ItemMapper.selectBatchIds   : <==      Total: 1
+17:05:09:535 DEBUG 19820 --- [http-nio-8084-exec-4] c.h.i.mapper.ItemMapper.selectBatchIds   : ==>  Preparing: SELECT id,name,price,stock,image,category,brand,spec,sold,comment_count,isAD,status,create_time,update_time,creater,updater FROM item WHERE id IN ( ? )
+17:05:09:536 DEBUG 19820 --- [http-nio-8084-exec-4] c.h.i.mapper.ItemMapper.selectBatchIds   : ==> Parameters: 100000006163(Long)
+17:05:09:538 DEBUG 19820 --- [http-nio-8084-exec-4] c.h.i.mapper.ItemMapper.selectBatchIds   : <==      Total: 1
+17:05:10:329 DEBUG 16892 --- [http-nio-8081-exec-2] c.h.i.mapper.ItemMapper.selectBatchIds   : ==>  Preparing: SELECT id,name,price,stock,image,category,brand,spec,sold,comment_count,isAD,status,create_time,update_time,creater,updater FROM item WHERE id IN ( ? )
+17:05:10:330 DEBUG 16892 --- [http-nio-8081-exec-2] c.h.i.mapper.ItemMapper.selectBatchIds   : ==> Parameters: 100000006163(Long)
+17:05:10:332 DEBUG 16892 --- [http-nio-8081-exec-2] c.h.i.mapper.ItemMapper.selectBatchIds   : <==      Total: 1
+17:05:10:500 DEBUG 19820 --- [http-nio-8084-exec-5] c.h.i.mapper.ItemMapper.selectBatchIds   : ==>  Preparing: SELECT id,name,price,stock,image,category,brand,spec,sold,comment_count,isAD,status,create_time,update_time,creater,updater FROM item WHERE id IN ( ? )
+17:05:10:500 DEBUG 19820 --- [http-nio-8084-exec-5] c.h.i.mapper.ItemMapper.selectBatchIds   : ==> Parameters: 100000006163(Long)
+17:05:10:502 DEBUG 19820 --- [http-nio-8084-exec-5] c.h.i.mapper.ItemMapper.selectBatchIds   : <==      Total: 1
+17:05:10:675 DEBUG 16892 --- [http-nio-8081-exec-3] c.h.i.mapper.ItemMapper.selectBatchIds   : ==>  Preparing: SELECT id,name,price,stock,image,category,brand,spec,sold,comment_count,isAD,status,create_time,update_time,creater,updater FROM item WHERE id IN ( ? )
+17:05:10:676 DEBUG 16892 --- [http-nio-8081-exec-3] c.h.i.mapper.ItemMapper.selectBatchIds   : ==> Parameters: 100000006163(Long)
+17:05:10:679 DEBUG 16892 --- [http-nio-8081-exec-3] c.h.i.mapper.ItemMapper.selectBatchIds   : <==      Total: 1
+17:05:19:563 DEBUG 19820 --- [http-nio-8084-exec-6] c.h.i.mapper.ItemMapper.selectBatchIds   : ==>  Preparing: SELECT id,name,price,stock,image,category,brand,spec,sold,comment_count,isAD,status,create_time,update_time,creater,updater FROM item WHERE id IN ( ? )
+17:05:19:564 DEBUG 19820 --- [http-nio-8084-exec-6] c.h.i.mapper.ItemMapper.selectBatchIds   : ==> Parameters: 100000006163(Long)
+17:05:19:567 DEBUG 19820 --- [http-nio-8084-exec-6] c.h.i.mapper.ItemMapper.selectBatchIds   : <==      Total: 1
+17:05:20:270 DEBUG 16892 --- [http-nio-8081-exec-4] c.h.i.mapper.ItemMapper.selectBatchIds   : ==>  Preparing: SELECT id,name,price,stock,image,category,brand,spec,sold,comment_count,isAD,status,create_time,update_time,creater,updater FROM item WHERE id IN ( ? )
+17:05:20:271 DEBUG 16892 --- [http-nio-8081-exec-4] c.h.i.mapper.ItemMapper.selectBatchIds   : ==> Parameters: 100000006163(Long)
+17:05:20:273 DEBUG 16892 --- [http-nio-8081-exec-4] c.h.i.mapper.ItemMapper.selectBatchIds   : <==      Total: 1
+17:09:12:749 DEBUG 19820 --- [http-nio-8084-exec-8] c.h.i.mapper.ItemMapper.selectBatchIds   : ==>  Preparing: SELECT id,name,price,stock,image,category,brand,spec,sold,comment_count,isAD,status,create_time,update_time,creater,updater FROM item WHERE id IN ( ? )
+17:09:12:749 DEBUG 19820 --- [http-nio-8084-exec-8] c.h.i.mapper.ItemMapper.selectBatchIds   : ==> Parameters: 100000006163(Long)
+17:09:12:752 DEBUG 19820 --- [http-nio-8084-exec-8] c.h.i.mapper.ItemMapper.selectBatchIds   : <==      Total: 1
+17:09:13:283 DEBUG 16892 --- [http-nio-8081-exec-6] c.h.i.mapper.ItemMapper.selectBatchIds   : ==>  Preparing: SELECT id,name,price,stock,image,category,brand,spec,sold,comment_count,isAD,status,create_time,update_time,creater,updater FROM item WHERE id IN ( ? )
+17:09:13:283 DEBUG 16892 --- [http-nio-8081-exec-6] c.h.i.mapper.ItemMapper.selectBatchIds   : ==> Parameters: 100000006163(Long)
+17:09:13:286 DEBUG 16892 --- [http-nio-8081-exec-6] c.h.i.mapper.ItemMapper.selectBatchIds   : <==      Total: 1
+17:09:13:430 DEBUG 19820 --- [http-nio-8084-exec-9] c.h.i.mapper.ItemMapper.selectBatchIds   : ==>  Preparing: SELECT id,name,price,stock,image,category,brand,spec,sold,comment_count,isAD,status,create_time,update_time,creater,updater FROM item WHERE id IN ( ? )
+17:09:13:430 DEBUG 19820 --- [http-nio-8084-exec-9] c.h.i.mapper.ItemMapper.selectBatchIds   : ==> Parameters: 100000006163(Long)
+17:09:13:433 DEBUG 19820 --- [http-nio-8084-exec-9] c.h.i.mapper.ItemMapper.selectBatchIds   : <==      Total: 1
+17:09:13:608 DEBUG 16892 --- [http-nio-8081-exec-7] c.h.i.mapper.ItemMapper.selectBatchIds   : ==>  Preparing: SELECT id,name,price,stock,image,category,brand,spec,sold,comment_count,isAD,status,create_time,update_time,creater,updater FROM item WHERE id IN ( ? )
+17:09:13:609 DEBUG 16892 --- [http-nio-8081-exec-7] c.h.i.mapper.ItemMapper.selectBatchIds   : ==> Parameters: 100000006163(Long)
+17:09:13:611 DEBUG 16892 --- [http-nio-8081-exec-7] c.h.i.mapper.ItemMapper.selectBatchIds   : <==      Total: 1
+17:09:13:779 DEBUG 19820 --- [http-nio-8084-exec-10] c.h.i.mapper.ItemMapper.selectBatchIds   : ==>  Preparing: SELECT id,name,price,stock,image,category,brand,spec,sold,comment_count,isAD,status,create_time,update_time,creater,updater FROM item WHERE id IN ( ? )
+17:09:13:779 DEBUG 19820 --- [http-nio-8084-exec-10] c.h.i.mapper.ItemMapper.selectBatchIds   : ==> Parameters: 100000006163(Long)
+17:09:13:782 DEBUG 19820 --- [http-nio-8084-exec-10] c.h.i.mapper.ItemMapper.selectBatchIds   : <==      Total: 1
+17:15:38:535  INFO 19820 --- [nacos-grpc-client-executor-1593] com.alibaba.nacos.common.remote.client   : [fa83225f-0aa3-4c7c-895b-2be554390d24] Receive server push request, request = NotifySubscriberRequest, requestId = 25
+17:15:38:540  INFO 19820 --- [nacos-grpc-client-executor-1593] com.alibaba.nacos.common.remote.client   : [fa83225f-0aa3-4c7c-895b-2be554390d24] Ack server push request, request = NotifySubscriberRequest, requestId = 25
+17:15:58:148  INFO 19820 --- [com.alibaba.nacos.client.remote.worker] com.alibaba.nacos.common.remote.client   : [fa83225f-0aa3-4c7c-895b-2be554390d24] Server healthy check fail, currentConnection = 1722237065728_192.168.88.1_8169
+17:15:58:150  INFO 19820 --- [com.alibaba.nacos.client.remote.worker] com.alibaba.nacos.common.remote.client   : [fa83225f-0aa3-4c7c-895b-2be554390d24] Try to reconnect to a new server, server is  not appointed, will choose a random server.
