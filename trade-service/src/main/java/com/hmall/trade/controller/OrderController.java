@@ -17,7 +17,7 @@ import org.springframework.web.bind.annotation.*;
 @RequiredArgsConstructor
 public class OrderController {
     private final IOrderService orderService;
-
+//    private final OrderMapper orderMapper;
     @ApiOperation("根据id查询订单")
     @GetMapping("{id}")
     public OrderVO queryOrderById(@Param ("订单id")@PathVariable("id") Long orderId) {
@@ -36,4 +36,9 @@ public class OrderController {
     public void markOrderPaySuccess(@PathVariable("orderId") Long orderId) {
         orderService.markOrderPaySuccess(orderId);
     }
+//
+//    @PutMapping("/update")
+//    public void updateById(@RequestBody Order order) {
+//        orderMapper.updateById(order);
+//    }
 }

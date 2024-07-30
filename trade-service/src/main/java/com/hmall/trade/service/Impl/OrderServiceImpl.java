@@ -6,10 +6,10 @@ import com.hmall.api.client.CartClient;
 import com.hmall.api.client.ItemClient;
 import com.hmall.api.dto.ItemDTO;
 import com.hmall.api.dto.OrderDetailDTO;
+import com.hmall.api.po.Order;
 import com.hmall.common.exception.BadRequestException;
 import com.hmall.common.utils.UserContext;
 import com.hmall.trade.domain.dto.OrderFormDTO;
-import com.hmall.trade.domain.po.Order;
 import com.hmall.trade.domain.po.OrderDetail;
 import com.hmall.trade.mapper.OrderMapper;
 import com.hmall.trade.service.IOrderDetailService;
@@ -40,7 +40,7 @@ public class OrderServiceImpl extends ServiceImpl<OrderMapper, Order> implements
     private final ItemClient itemClient;
     private final IOrderDetailService detailService;
     private final CartClient cartClient;
-
+    private final OrderMapper orderMapper;
     @Override
     @Transactional
     public Long createOrder(OrderFormDTO orderFormDTO) {
@@ -92,8 +92,10 @@ public class OrderServiceImpl extends ServiceImpl<OrderMapper, Order> implements
         order.setId(orderId);
         order.setStatus(2);
         order.setPayTime(LocalDateTime.now());
-        updateById(order);
+        this.updateById(order);
     }
+
+
 
     private List<OrderDetail> buildDetails(Long orderId, List<ItemDTO> items, Map<Long, Integer> numMap) {
         List<OrderDetail> details = new ArrayList<>(items.size());
@@ -110,4 +112,5 @@ public class OrderServiceImpl extends ServiceImpl<OrderMapper, Order> implements
         }
         return details;
     }
+
 }
