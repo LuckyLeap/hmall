@@ -10,6 +10,7 @@
         <module name="item-service" />
         <module name="cart-service" />
         <module name="user-service" />
+        <module name="trade-service" />
         <module name="hm-common" />
         <module name="hm-api" />
       </profile>
@@ -26,6 +27,7 @@
       <module name="hm-common" options="-parameters" />
       <module name="hm-service" options="" />
       <module name="item-service" options="-parameters" />
+      <module name="trade-service" options="-parameters" />
       <module name="user-service" options="-parameters" />
     </option>
   </component>
