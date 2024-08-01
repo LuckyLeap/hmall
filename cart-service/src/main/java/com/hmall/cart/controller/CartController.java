@@ -1,7 +1,7 @@
 package com.hmall.cart.controller;
 
 
-import com.hmall.cart.config.CartProperties;
+import cn.hutool.core.thread.ThreadUtil;
 import com.hmall.cart.domain.dto.CartFormDTO;
 import com.hmall.cart.domain.po.Cart;
 import com.hmall.cart.domain.vo.CartVO;
@@ -46,6 +46,7 @@ public class CartController {
     @ApiOperation("查询购物车列表")
     @GetMapping
     public List<CartVO> queryMyCarts(@RequestHeader("user-info") String userInfo){
+        ThreadUtil.sleep(500);
         System.out.println("userInfo:" + userInfo);
         return cartService.queryMyCarts();
     }
