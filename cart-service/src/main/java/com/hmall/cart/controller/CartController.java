@@ -1,6 +1,7 @@
 package com.hmall.cart.controller;
 
 
+import com.hmall.cart.config.CartProperties;
 import com.hmall.cart.domain.dto.CartFormDTO;
 import com.hmall.cart.domain.po.Cart;
 import com.hmall.cart.domain.vo.CartVO;
@@ -21,6 +22,8 @@ import java.util.List;
 @RequiredArgsConstructor
 public class CartController {
     private final ICartService cartService;
+
+
 
     @ApiOperation("添加商品到购物车")
     @PostMapping
