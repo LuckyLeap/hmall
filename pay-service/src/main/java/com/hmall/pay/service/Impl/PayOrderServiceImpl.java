@@ -65,11 +65,11 @@ public class PayOrderServiceImpl extends ServiceImpl<PayOrderMapper, PayOrder> i
         }
         // 5.修改订单状态
 //        tradeclient.markOrderPaySuccess(po.getBizOrderNo());
-        try {
-            rabbitTemplate.convertAndSend("pay.direct", "pay.success", po.getBizOrderNo());
-        } catch (Exception e) {
-            log.error("支付成功的消息发送失败，支付单id：{}， 交易单id：{}", po.getId(), po.getBizOrderNo(), e);
-        }
+//        try {
+//            rabbitTemplate.convertAndSend("pay.direct", "pay.success", po.getBizOrderNo());
+//        } catch (Exception e) {
+//            log.error("支付成功的消息发送失败，支付单id：{}， 交易单id：{}", po.getId(), po.getBizOrderNo(), e);
+//        }
     }
 
     public boolean markPayOrderSuccess(Long id, LocalDateTime successTime) {

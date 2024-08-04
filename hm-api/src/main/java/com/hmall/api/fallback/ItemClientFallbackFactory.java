@@ -27,6 +27,19 @@ public class ItemClientFallbackFactory implements FallbackFactory<ItemClient> {
                 throw new RuntimeException("扣减库存服务失败");
             }
 
+            @Override
+            public void updateItem(ItemDTO item) {
+                log.error("更新商品服务失败", cause);
+                throw new RuntimeException("更新商品服务失败");
+            }
+
+            @Override
+            public ItemDTO queryItemById(Long id) {
+                log.error("查询商品服务失败", cause);
+                return null;
+            }
+
+
         };
     }
 }

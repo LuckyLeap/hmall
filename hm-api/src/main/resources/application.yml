@@ -1,0 +1,4 @@
+logging:
+  level:
+    com.hmall.trade.client.ItemClient: DEBUG
+    feign: DEBUG

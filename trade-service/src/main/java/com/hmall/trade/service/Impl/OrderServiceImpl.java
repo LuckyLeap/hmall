@@ -9,6 +9,7 @@ import com.hmall.api.dto.OrderDetailDTO;
 import com.hmall.api.po.Order;
 import com.hmall.common.exception.BadRequestException;
 import com.hmall.common.utils.UserContext;
+import com.hmall.trade.constants.MQConstants;
 import com.hmall.trade.domain.dto.OrderFormDTO;
 import com.hmall.trade.domain.po.OrderDetail;
 import com.hmall.trade.mapper.OrderMapper;
@@ -16,14 +17,12 @@ import com.hmall.trade.service.IOrderDetailService;
 import com.hmall.trade.service.IOrderService;
 import io.seata.spring.annotation.GlobalTransactional;
 import lombok.RequiredArgsConstructor;
+import org.springframework.amqp.rabbit.core.RabbitTemplate;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
 import java.time.LocalDateTime;
-import java.util.ArrayList;
-import java.util.List;
-import java.util.Map;
-import java.util.Set;
+import java.util.*;
 import java.util.stream.Collectors;
 
 /**
@@ -42,6 +41,7 @@ public class OrderServiceImpl extends ServiceImpl<OrderMapper, Order> implements
     private final IOrderDetailService detailService;
     private final CartClient cartClient;
     private final OrderMapper orderMapper;
+    private final RabbitTemplate rabbitTemplate;
     @Override
     @GlobalTransactional
     @Transactional
@@ -85,6 +85,17 @@ public class OrderServiceImpl extends ServiceImpl<OrderMapper, Order> implements
         } catch (Exception e) {
             throw new RuntimeException("库存不足！");
         }
+        // 5.发送延时消息，检测订单支付状态
+        rabbitTemplate.convertAndSend(
+                MQConstants.DELAY_EXCHANGE_NAME,
+                MQConstants.DELAY_ORDER_KEY,
+                order.getId(),
+                message -> {
+                    message.getMessageProperties().setDelay(15*60*1000);
+                    return message;
+                }
+        );
+
         return order.getId();
     }
 
@@ -97,6 +108,20 @@ public class OrderServiceImpl extends ServiceImpl<OrderMapper, Order> implements
         this.updateById(order);
     }
 
+    @Override
+    public void cancelOrder(Long orderId) {
+        //取消订单，释放库存
+        //1.查询订单详情
+        List<OrderDetail> details = detailService.getByOrderId(orderId);
+        //2.释放库存
+        for (OrderDetail detail : details) {
+            ItemDTO item = itemClient.queryItemById(detail.getItemId());
+            item.setStock(item.getStock() + detail.getNum());
+            itemClient.updateItem(item);
+        }
+        //3.删除订单
+        orderMapper.deleteById(orderId);
+    }
 
 
     private List<OrderDetail> buildDetails(Long orderId, List<ItemDTO> items, Map<Long, Integer> numMap) {
