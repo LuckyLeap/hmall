@@ -1680,3 +1680,167 @@ Caused by: java.lang.reflect.InaccessibleObjectException: Unable to make protect
 18:25:30:101  WARN 30964 --- [Thread-5] c.a.nacos.common.notify.NotifyCenter     : [NotifyCenter] Start destroying Publisher
 18:25:30:101  WARN 30964 --- [Thread-1] c.a.n.common.http.HttpClientBeanHolder   : [HttpClientBeanHolder] Start destroying common HttpClient
 18:25:30:101  WARN 30964 --- [Thread-5] c.a.nacos.common.notify.NotifyCenter     : [NotifyCenter] Destruction of the end
+18:27:15:888  INFO 19452 --- [main] com.hmall.item.ItemApplication           : The following 1 profile is active: "local"
+18:27:16:775  INFO 19452 --- [main] o.s.cloud.context.scope.GenericScope     : BeanFactory id=0d211d61-18a4-3a7f-b620-43119bcab096
+18:27:16:840  INFO 19452 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'io.seata.spring.boot.autoconfigure.SeataCoreAutoConfiguration' of type [io.seata.spring.boot.autoconfigure.SeataCoreAutoConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+18:27:16:841  INFO 19452 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'springApplicationContextProvider' of type [io.seata.spring.boot.autoconfigure.provider.SpringApplicationContextProvider] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+18:27:16:842  INFO 19452 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'io.seata.spring.boot.autoconfigure.SeataAutoConfiguration' of type [io.seata.spring.boot.autoconfigure.SeataAutoConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+18:27:16:883  INFO 19452 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'failureHandler' of type [io.seata.tm.api.DefaultFailureHandlerImpl] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+18:27:16:886  INFO 19452 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.cloud.commons.config.CommonsConfigAutoConfiguration' of type [org.springframework.cloud.commons.config.CommonsConfigAutoConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+18:27:16:887  INFO 19452 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.cloud.client.loadbalancer.LoadBalancerDefaultMappingsProviderAutoConfiguration' of type [org.springframework.cloud.client.loadbalancer.LoadBalancerDefaultMappingsProviderAutoConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+18:27:16:888  INFO 19452 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'loadBalancerClientsDefaultsMappingsProvider' of type [org.springframework.cloud.client.loadbalancer.LoadBalancerDefaultMappingsProviderAutoConfiguration$$Lambda/0x000001de9e601b50] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+18:27:16:890  INFO 19452 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'defaultsBindHandlerAdvisor' of type [org.springframework.cloud.commons.config.DefaultsBindHandlerAdvisor] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+18:27:16:894  INFO 19452 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'springCloudAlibabaConfiguration' of type [io.seata.spring.boot.autoconfigure.properties.SpringCloudAlibabaConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+18:27:16:896  INFO 19452 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'seataProperties' of type [io.seata.spring.boot.autoconfigure.properties.SeataProperties] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+18:27:16:899  INFO 19452 --- [main] i.s.s.b.a.SeataAutoConfiguration         : Automatically configure Seata
+18:27:16:952  INFO 19452 --- [main] io.seata.config.ConfigurationFactory     : load Configuration from :Spring Configuration
+18:27:16:957  INFO 19452 --- [main] io.seata.config.ConfigurationFactory     : load Configuration from :Spring Configuration
+18:27:17:026  INFO 19452 --- [main] i.s.s.a.GlobalTransactionScanner         : Initializing Global Transaction Clients ... 
+18:27:17:137  INFO 19452 --- [main] i.s.core.rpc.netty.NettyClientBootstrap  : NettyClientBootstrap has started
+18:27:17:438  INFO 19452 --- [main] com.alibaba.nacos.common.remote.client   : [RpcClientFactory] create a new rpc client of 91871cbd-ef78-48b7-9132-cb3cc58a0a38
+18:27:17:438  INFO 19452 --- [main] com.alibaba.nacos.common.remote.client   : [91871cbd-ef78-48b7-9132-cb3cc58a0a38] RpcClient init label, labels = {module=naming, source=sdk}
+18:27:17:440  INFO 19452 --- [main] com.alibaba.nacos.common.remote.client   : [91871cbd-ef78-48b7-9132-cb3cc58a0a38] RpcClient init, ServerListFactory = com.alibaba.nacos.client.naming.core.ServerListManager
+18:27:17:440  INFO 19452 --- [main] com.alibaba.nacos.common.remote.client   : [91871cbd-ef78-48b7-9132-cb3cc58a0a38] Registry connection listener to current client:com.alibaba.nacos.client.naming.remote.gprc.redo.NamingGrpcRedoService
+18:27:17:441  INFO 19452 --- [main] com.alibaba.nacos.common.remote.client   : [91871cbd-ef78-48b7-9132-cb3cc58a0a38] Register server push request handler:com.alibaba.nacos.client.naming.remote.gprc.NamingPushRequestHandler
+18:27:17:442  INFO 19452 --- [main] com.alibaba.nacos.common.remote.client   : [91871cbd-ef78-48b7-9132-cb3cc58a0a38] Try to connect to server on start up, server: {serverIp = '192.168.88.140', server main port = 8848}
+18:27:17:568  INFO 19452 --- [main] com.alibaba.nacos.common.remote.client   : [91871cbd-ef78-48b7-9132-cb3cc58a0a38] Success to connect to server [192.168.88.140:8848] on start up, connectionId = 1722767238352_192.168.88.1_22277
+18:27:17:568  INFO 19452 --- [main] com.alibaba.nacos.common.remote.client   : [91871cbd-ef78-48b7-9132-cb3cc58a0a38] Register server push request handler:com.alibaba.nacos.common.remote.client.RpcClient$ConnectResetRequestHandler
+18:27:17:568  INFO 19452 --- [com.alibaba.nacos.client.remote.worker] com.alibaba.nacos.common.remote.client   : [91871cbd-ef78-48b7-9132-cb3cc58a0a38] Notify connected event to listeners.
+18:27:17:569  INFO 19452 --- [main] com.alibaba.nacos.common.remote.client   : [91871cbd-ef78-48b7-9132-cb3cc58a0a38] Register server push request handler:com.alibaba.nacos.common.remote.client.RpcClient$$Lambda/0x000001de9e4fd450
+18:27:17:605  INFO 19452 --- [main] i.s.c.r.netty.NettyClientChannelManager  : will connect to 192.168.88.140:8099
+18:27:17:610  INFO 19452 --- [main] i.s.core.rpc.netty.NettyPoolableFactory  : NettyPool create channel to transactionRole:TMROLE,address:192.168.88.140:8099,msg:< RegisterTMRequest{applicationId='item-service', transactionServiceGroup='hmall'} >
+18:27:17:718  WARN 19452 --- [NettyClientSelector_TMROLE_1_1] ServiceLoader$InnerEnhancedServiceLoader : Load [io.seata.serializer.hessian.HessianSerializer] class fail. com/caucho/hessian/io/AbstractHessianOutput
+18:27:17:750  INFO 19452 --- [main] i.s.c.rpc.netty.TmNettyRemotingClient    : register TM success. client version:1.5.2, server version:1.5.2,channel:[id: 0xad8652b2, L:/192.168.88.1:22278 - R:/192.168.88.140:8099]
+18:27:17:758  INFO 19452 --- [main] i.s.core.rpc.netty.NettyPoolableFactory  : register success, cost 67 ms, version:1.5.2,role:TMROLE,channel:[id: 0xad8652b2, L:/192.168.88.1:22278 - R:/192.168.88.140:8099]
+18:27:17:759  INFO 19452 --- [main] i.s.s.a.GlobalTransactionScanner         : Transaction Manager Client is initialized. applicationId[item-service] txServiceGroup[hmall]
+18:27:17:776  INFO 19452 --- [main] io.seata.rm.datasource.AsyncWorker       : Async Commit Buffer Limit: 10000
+18:27:17:776  INFO 19452 --- [main] i.s.rm.datasource.xa.ResourceManagerXA   : ResourceManagerXA init ...
+18:27:17:784  INFO 19452 --- [main] i.s.core.rpc.netty.NettyClientBootstrap  : NettyClientBootstrap has started
+18:27:17:784  INFO 19452 --- [main] i.s.s.a.GlobalTransactionScanner         : Resource Manager is initialized. applicationId[item-service] txServiceGroup[hmall]
+18:27:17:784  INFO 19452 --- [main] i.s.s.a.GlobalTransactionScanner         : Global Transaction Clients are initialized. 
+18:27:17:787  INFO 19452 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'io.seata.spring.boot.autoconfigure.SeataDataSourceAutoConfiguration' of type [io.seata.spring.boot.autoconfigure.SeataDataSourceAutoConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+18:27:18:167  INFO 19452 --- [nacos-grpc-client-executor-6] com.alibaba.nacos.common.remote.client   : [91871cbd-ef78-48b7-9132-cb3cc58a0a38] Receive server push request, request = NotifySubscriberRequest, requestId = 155
+18:27:18:169  INFO 19452 --- [nacos-grpc-client-executor-6] com.alibaba.nacos.common.remote.client   : [91871cbd-ef78-48b7-9132-cb3cc58a0a38] Ack server push request, request = NotifySubscriberRequest, requestId = 155
+18:27:18:286  INFO 19452 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8081 (http)
+18:27:18:299  INFO 19452 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+18:27:18:299  INFO 19452 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.75]
+18:27:18:470  INFO 19452 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+18:27:18:471  INFO 19452 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 2567 ms
+18:27:18:681  INFO 19452 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+18:27:19:212  INFO 19452 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+18:27:19:298  INFO 19452 --- [main] i.s.c.r.netty.NettyClientChannelManager  : will connect to 192.168.88.140:8099
+18:27:19:298  INFO 19452 --- [main] i.s.c.rpc.netty.RmNettyRemotingClient    : RM will register :jdbc:mysql://192.168.88.140:3306/hm-item
+18:27:19:298  INFO 19452 --- [main] i.s.core.rpc.netty.NettyPoolableFactory  : NettyPool create channel to transactionRole:RMROLE,address:192.168.88.140:8099,msg:< RegisterRMRequest{resourceIds='jdbc:mysql://192.168.88.140:3306/hm-item', applicationId='item-service', transactionServiceGroup='hmall'} >
+18:27:19:357  INFO 19452 --- [main] i.s.c.rpc.netty.RmNettyRemotingClient    : register RM success. client version:1.5.2, server version:1.5.2,channel:[id: 0x1ee138cd, L:/192.168.88.1:22280 - R:/192.168.88.140:8099]
+18:27:19:357  INFO 19452 --- [main] i.s.core.rpc.netty.NettyPoolableFactory  : register success, cost 57 ms, version:1.5.2,role:RMROLE,channel:[id: 0x1ee138cd, L:/192.168.88.1:22280 - R:/192.168.88.140:8099]
+18:27:19:858  INFO 19452 --- [main] c.a.c.sentinel.SentinelWebMvcConfigurer  : [Sentinel Starter] register SentinelWebInterceptor with urlPatterns: [/**].
+18:27:20:296  INFO 19452 --- [main] pertySourcedRequestMappingHandlerMapping : Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2ControllerWebMvc#getDocumentation(String, HttpServletRequest)]
+18:27:20:480  INFO 19452 --- [main] com.alibaba.nacos.common.remote.client   : [RpcClientFactory] create a new rpc client of 423ee28b-3284-4c8a-bc40-90c9be23fc1e
+18:27:20:480  INFO 19452 --- [main] com.alibaba.nacos.common.remote.client   : [423ee28b-3284-4c8a-bc40-90c9be23fc1e] RpcClient init label, labels = {module=naming, source=sdk}
+18:27:20:480  INFO 19452 --- [main] com.alibaba.nacos.common.remote.client   : [423ee28b-3284-4c8a-bc40-90c9be23fc1e] RpcClient init, ServerListFactory = com.alibaba.nacos.client.naming.core.ServerListManager
+18:27:20:480  INFO 19452 --- [main] com.alibaba.nacos.common.remote.client   : [423ee28b-3284-4c8a-bc40-90c9be23fc1e] Registry connection listener to current client:com.alibaba.nacos.client.naming.remote.gprc.redo.NamingGrpcRedoService
+18:27:20:480  INFO 19452 --- [main] com.alibaba.nacos.common.remote.client   : [423ee28b-3284-4c8a-bc40-90c9be23fc1e] Register server push request handler:com.alibaba.nacos.client.naming.remote.gprc.NamingPushRequestHandler
+18:27:20:480  INFO 19452 --- [main] com.alibaba.nacos.common.remote.client   : [423ee28b-3284-4c8a-bc40-90c9be23fc1e] Try to connect to server on start up, server: {serverIp = '192.168.88.140', server main port = 8848}
+18:27:20:601  INFO 19452 --- [main] com.alibaba.nacos.common.remote.client   : [423ee28b-3284-4c8a-bc40-90c9be23fc1e] Success to connect to server [192.168.88.140:8848] on start up, connectionId = 1722767241391_192.168.88.1_22290
+18:27:20:601  INFO 19452 --- [main] com.alibaba.nacos.common.remote.client   : [423ee28b-3284-4c8a-bc40-90c9be23fc1e] Register server push request handler:com.alibaba.nacos.common.remote.client.RpcClient$ConnectResetRequestHandler
+18:27:20:602  INFO 19452 --- [com.alibaba.nacos.client.remote.worker] com.alibaba.nacos.common.remote.client   : [423ee28b-3284-4c8a-bc40-90c9be23fc1e] Notify connected event to listeners.
+18:27:20:602  INFO 19452 --- [main] com.alibaba.nacos.common.remote.client   : [423ee28b-3284-4c8a-bc40-90c9be23fc1e] Register server push request handler:com.alibaba.nacos.common.remote.client.RpcClient$$Lambda/0x000001de9e4fd450
+18:27:20:628  INFO 19452 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8081 (http) with context path ''
+18:27:20:646  INFO 19452 --- [main] c.a.c.n.registry.NacosServiceRegistry    : nacos registry, DEFAULT_GROUP item-service 192.168.56.1:8081 register finished
+18:27:20:651  INFO 19452 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Documentation plugins bootstrapped
+18:27:20:653  INFO 19452 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Found 1 custom documentation plugin(s)
+18:27:20:680  INFO 19452 --- [main] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
+18:27:20:806  INFO 19452 --- [main] com.hmall.item.ItemApplication           : Started ItemApplication in 7.132 seconds (JVM running for 8.495)
+18:27:20:815  INFO 19452 --- [main] c.a.c.n.refresh.NacosContextRefresher    : [Nacos Config] Listening config: dataId=item-service.yaml, group=DEFAULT_GROUP
+18:27:20:815  INFO 19452 --- [main] c.a.c.n.refresh.NacosContextRefresher    : [Nacos Config] Listening config: dataId=item-service-local.yaml, group=DEFAULT_GROUP
+18:27:20:817  INFO 19452 --- [main] c.a.c.n.refresh.NacosContextRefresher    : [Nacos Config] Listening config: dataId=item-service, group=DEFAULT_GROUP
+18:27:21:172  INFO 19452 --- [nacos-grpc-client-executor-7] com.alibaba.nacos.common.remote.client   : [423ee28b-3284-4c8a-bc40-90c9be23fc1e] Receive server push request, request = NotifySubscriberRequest, requestId = 156
+18:27:21:173  INFO 19452 --- [nacos-grpc-client-executor-7] com.alibaba.nacos.common.remote.client   : [423ee28b-3284-4c8a-bc40-90c9be23fc1e] Ack server push request, request = NotifySubscriberRequest, requestId = 156
+18:28:40:173  INFO 19452 --- [http-nio-8081-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+18:28:40:173  INFO 19452 --- [http-nio-8081-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+18:28:40:175  INFO 19452 --- [http-nio-8081-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+18:28:40:492  WARN 19452 --- [http-nio-8081-exec-1] c.b.m.c.t.support.ReflectLambdaMeta      : Unable to make field private final java.lang.Class java.lang.invoke.SerializedLambda.capturingClass accessible: module java.base does not "opens java.lang.invoke" to unnamed module @1e178745
+18:28:40:585 DEBUG 19452 --- [http-nio-8081-exec-1] c.h.i.m.ItemMapper.selectPage_mpCount    : ==>  Preparing: SELECT COUNT(*) AS total FROM item WHERE (status = ?)
+18:28:40:613 DEBUG 19452 --- [http-nio-8081-exec-1] c.h.i.m.ItemMapper.selectPage_mpCount    : ==> Parameters: 1(Integer)
+18:28:40:787 DEBUG 19452 --- [http-nio-8081-exec-1] c.h.i.m.ItemMapper.selectPage_mpCount    : <==      Total: 1
+18:28:40:797 DEBUG 19452 --- [http-nio-8081-exec-1] c.h.item.mapper.ItemMapper.selectPage    : ==>  Preparing: SELECT id, name, price, stock, image, category, brand, spec, sold, comment_count, isAD, status, create_time, update_time, creater, updater FROM item WHERE (status = ?) ORDER BY update_time DESC LIMIT ?
+18:28:40:797 DEBUG 19452 --- [http-nio-8081-exec-1] c.h.item.mapper.ItemMapper.selectPage    : ==> Parameters: 1(Integer), 20(Long)
+18:28:40:840 DEBUG 19452 --- [http-nio-8081-exec-1] c.h.item.mapper.ItemMapper.selectPage    : <==      Total: 20
+18:28:42:738 DEBUG 19452 --- [http-nio-8081-exec-2] c.h.i.mapper.ItemMapper.selectBatchIds   : ==>  Preparing: SELECT id,name,price,stock,image,category,brand,spec,sold,comment_count,isAD,status,create_time,update_time,creater,updater FROM item WHERE id IN ( ? )
+18:28:42:739 DEBUG 19452 --- [http-nio-8081-exec-2] c.h.i.mapper.ItemMapper.selectBatchIds   : ==> Parameters: 100002273484(Long)
+18:28:42:742 DEBUG 19452 --- [http-nio-8081-exec-2] c.h.i.mapper.ItemMapper.selectBatchIds   : <==      Total: 1
+18:28:46:888 DEBUG 19452 --- [http-nio-8081-exec-3] c.h.i.mapper.ItemMapper.selectBatchIds   : ==>  Preparing: SELECT id,name,price,stock,image,category,brand,spec,sold,comment_count,isAD,status,create_time,update_time,creater,updater FROM item WHERE id IN ( ? )
+18:28:47:145 DEBUG 19452 --- [http-nio-8081-exec-3] c.h.i.mapper.ItemMapper.selectBatchIds   : ==> Parameters: 100002273484(Long)
+18:28:47:150 DEBUG 19452 --- [http-nio-8081-exec-3] c.h.i.mapper.ItemMapper.selectBatchIds   : <==      Total: 1
+18:28:48:301 DEBUG 19452 --- [http-nio-8081-exec-4] c.h.item.mapper.ItemMapper.updateStock   : ==>  Preparing: UPDATE item SET stock = stock - ? WHERE id = ?
+18:28:48:315 DEBUG 19452 --- [http-nio-8081-exec-4] c.h.item.mapper.ItemMapper.updateStock   : ==> Parameters: 1(Integer), 100002273484(Long)
+18:28:48:485  WARN 19452 --- [http-nio-8081-exec-4] ServiceLoader$InnerEnhancedServiceLoader : Load [io.seata.rm.datasource.undo.parser.ProtostuffUndoLogParser] class fail. io/protostuff/runtime/IdStrategy
+18:28:49:072  INFO 19452 --- [rpcDispatch_RMROLE_1_1_24] i.s.c.r.p.c.RmBranchCommitProcessor      : rm client handle branch commit process:xid=192.168.88.140:8099:45586199005516022,branchId=45586199005516028,branchType=AT,resourceId=jdbc:mysql://192.168.88.140:3306/hm-item,applicationData={"autoCommit":false}
+18:28:49:074  INFO 19452 --- [rpcDispatch_RMROLE_1_1_24] io.seata.rm.AbstractRMHandler            : Branch committing: 192.168.88.140:8099:45586199005516022 45586199005516028 jdbc:mysql://192.168.88.140:3306/hm-item {"autoCommit":false}
+18:28:49:075  INFO 19452 --- [rpcDispatch_RMROLE_1_1_24] io.seata.rm.AbstractRMHandler            : Branch commit result: PhaseTwo_Committed
+18:28:51:099 DEBUG 19452 --- [http-nio-8081-exec-5] c.h.i.mapper.ItemMapper.selectBatchIds   : ==>  Preparing: SELECT id,name,price,stock,image,category,brand,spec,sold,comment_count,isAD,status,create_time,update_time,creater,updater FROM item WHERE id IN ( ? )
+18:28:51:099 DEBUG 19452 --- [http-nio-8081-exec-5] c.h.i.mapper.ItemMapper.selectBatchIds   : ==> Parameters: 100002273484(Long)
+18:28:51:104 DEBUG 19452 --- [http-nio-8081-exec-5] c.h.i.mapper.ItemMapper.selectBatchIds   : <==      Total: 1
+18:28:51:147 DEBUG 19452 --- [http-nio-8081-exec-6] c.h.item.mapper.ItemMapper.updateStock   : ==>  Preparing: UPDATE item SET stock = stock - ? WHERE id = ?
+18:28:51:148 DEBUG 19452 --- [http-nio-8081-exec-6] c.h.item.mapper.ItemMapper.updateStock   : ==> Parameters: 1(Integer), 100002273484(Long)
+18:28:52:060  INFO 19452 --- [rpcDispatch_RMROLE_1_2_24] i.s.c.r.p.c.RmBranchCommitProcessor      : rm client handle branch commit process:xid=192.168.88.140:8099:45586199005516033,branchId=45586199005516035,branchType=AT,resourceId=jdbc:mysql://192.168.88.140:3306/hm-item,applicationData={"autoCommit":false}
+18:28:52:060  INFO 19452 --- [rpcDispatch_RMROLE_1_2_24] io.seata.rm.AbstractRMHandler            : Branch committing: 192.168.88.140:8099:45586199005516033 45586199005516035 jdbc:mysql://192.168.88.140:3306/hm-item {"autoCommit":false}
+18:28:52:060  INFO 19452 --- [rpcDispatch_RMROLE_1_2_24] io.seata.rm.AbstractRMHandler            : Branch commit result: PhaseTwo_Committed
+18:32:58:625 DEBUG 19452 --- [http-nio-8081-exec-5] c.h.item.mapper.ItemMapper.selectById    : ==>  Preparing: SELECT id,name,price,stock,image,category,brand,spec,sold,comment_count,isAD,status,create_time,update_time,creater,updater FROM item WHERE id=?
+18:32:58:626 DEBUG 19452 --- [http-nio-8081-exec-5] c.h.item.mapper.ItemMapper.selectById    : ==> Parameters: 100002273484(Long)
+18:32:58:629 DEBUG 19452 --- [http-nio-8081-exec-5] c.h.item.mapper.ItemMapper.selectById    : <==      Total: 1
+18:32:58:675 DEBUG 19452 --- [http-nio-8081-exec-6] c.h.item.mapper.ItemMapper.updateById    : ==>  Preparing: UPDATE item SET name=?, price=?, stock=?, image=?, category=?, brand=?, spec=?, sold=?, comment_count=?, isAD=? WHERE id=?
+18:32:58:678 DEBUG 19452 --- [http-nio-8081-exec-6] c.h.item.mapper.ItemMapper.updateById    : ==> Parameters: 新秀丽铝框拉杆箱Samsonite男女行李箱旅行箱硬箱TRU-FRAME   25英寸 紫色I00*51002(String), 67900(Integer), 10001(Integer), https://m.360buyimg.com/mobilecms/s720x720_jfs/t1/15622/40/942/115673/5c0df843Eed114ae3/f443f063b74039cb.jpg!q70.jpg.webp(String), 拉杆箱(String), 新秀丽(String), {"颜色": "紫色"}(String), 0(Integer), 0(Integer), false(Boolean), 100002273484(Long)
+18:32:58:683 DEBUG 19452 --- [http-nio-8081-exec-6] c.h.item.mapper.ItemMapper.updateById    : <==    Updates: 1
+18:32:58:726 DEBUG 19452 --- [http-nio-8081-exec-7] c.h.item.mapper.ItemMapper.selectById    : ==>  Preparing: SELECT id,name,price,stock,image,category,brand,spec,sold,comment_count,isAD,status,create_time,update_time,creater,updater FROM item WHERE id=?
+18:32:58:726 DEBUG 19452 --- [http-nio-8081-exec-7] c.h.item.mapper.ItemMapper.selectById    : ==> Parameters: 100002273484(Long)
+18:32:58:729 DEBUG 19452 --- [http-nio-8081-exec-7] c.h.item.mapper.ItemMapper.selectById    : <==      Total: 1
+18:32:58:736 DEBUG 19452 --- [http-nio-8081-exec-8] c.h.item.mapper.ItemMapper.updateById    : ==>  Preparing: UPDATE item SET name=?, price=?, stock=?, image=?, category=?, brand=?, spec=?, sold=?, comment_count=?, isAD=? WHERE id=?
+18:32:58:736 DEBUG 19452 --- [http-nio-8081-exec-8] c.h.item.mapper.ItemMapper.updateById    : ==> Parameters: 新秀丽铝框拉杆箱Samsonite男女行李箱旅行箱硬箱TRU-FRAME   25英寸 紫色I00*51002(String), 67900(Integer), 10002(Integer), https://m.360buyimg.com/mobilecms/s720x720_jfs/t1/15622/40/942/115673/5c0df843Eed114ae3/f443f063b74039cb.jpg!q70.jpg.webp(String), 拉杆箱(String), 新秀丽(String), {"颜色": "紫色"}(String), 0(Integer), 0(Integer), false(Boolean), 100002273484(Long)
+18:32:58:741 DEBUG 19452 --- [http-nio-8081-exec-8] c.h.item.mapper.ItemMapper.updateById    : <==    Updates: 1
+18:33:15:149 DEBUG 19452 --- [http-nio-8081-exec-9] c.h.i.m.ItemMapper.selectPage_mpCount    : ==>  Preparing: SELECT COUNT(*) AS total FROM item WHERE (status = ?)
+18:33:15:149 DEBUG 19452 --- [http-nio-8081-exec-9] c.h.i.m.ItemMapper.selectPage_mpCount    : ==> Parameters: 1(Integer)
+18:33:15:168 DEBUG 19452 --- [http-nio-8081-exec-9] c.h.i.m.ItemMapper.selectPage_mpCount    : <==      Total: 1
+18:33:15:171 DEBUG 19452 --- [http-nio-8081-exec-9] c.h.item.mapper.ItemMapper.selectPage    : ==>  Preparing: SELECT id, name, price, stock, image, category, brand, spec, sold, comment_count, isAD, status, create_time, update_time, creater, updater FROM item WHERE (status = ?) ORDER BY update_time DESC LIMIT ?
+18:33:15:172 DEBUG 19452 --- [http-nio-8081-exec-9] c.h.item.mapper.ItemMapper.selectPage    : ==> Parameters: 1(Integer), 20(Long)
+18:33:15:178 DEBUG 19452 --- [http-nio-8081-exec-9] c.h.item.mapper.ItemMapper.selectPage    : <==      Total: 20
+18:33:16:856 DEBUG 19452 --- [http-nio-8081-exec-10] c.h.i.mapper.ItemMapper.selectBatchIds   : ==>  Preparing: SELECT id,name,price,stock,image,category,brand,spec,sold,comment_count,isAD,status,create_time,update_time,creater,updater FROM item WHERE id IN ( ? )
+18:33:16:856 DEBUG 19452 --- [http-nio-8081-exec-10] c.h.i.mapper.ItemMapper.selectBatchIds   : ==> Parameters: 100002273484(Long)
+18:33:16:859 DEBUG 19452 --- [http-nio-8081-exec-10] c.h.i.mapper.ItemMapper.selectBatchIds   : <==      Total: 1
+18:33:20:975 DEBUG 19452 --- [http-nio-8081-exec-1] c.h.i.mapper.ItemMapper.selectBatchIds   : ==>  Preparing: SELECT id,name,price,stock,image,category,brand,spec,sold,comment_count,isAD,status,create_time,update_time,creater,updater FROM item WHERE id IN ( ? )
+18:33:20:976 DEBUG 19452 --- [http-nio-8081-exec-1] c.h.i.mapper.ItemMapper.selectBatchIds   : ==> Parameters: 100002273484(Long)
+18:33:20:978 DEBUG 19452 --- [http-nio-8081-exec-1] c.h.i.mapper.ItemMapper.selectBatchIds   : <==      Total: 1
+18:33:21:521 DEBUG 19452 --- [http-nio-8081-exec-3] c.h.item.mapper.ItemMapper.updateStock   : ==>  Preparing: UPDATE item SET stock = stock - ? WHERE id = ?
+18:33:21:521 DEBUG 19452 --- [http-nio-8081-exec-3] c.h.item.mapper.ItemMapper.updateStock   : ==> Parameters: 1(Integer), 100002273484(Long)
+18:33:22:060  INFO 19452 --- [rpcDispatch_RMROLE_1_3_24] i.s.c.r.p.c.RmBranchCommitProcessor      : rm client handle branch commit process:xid=192.168.88.140:8099:45586199005516040,branchId=45586199005516045,branchType=AT,resourceId=jdbc:mysql://192.168.88.140:3306/hm-item,applicationData={"autoCommit":false}
+18:33:22:060  INFO 19452 --- [rpcDispatch_RMROLE_1_3_24] io.seata.rm.AbstractRMHandler            : Branch committing: 192.168.88.140:8099:45586199005516040 45586199005516045 jdbc:mysql://192.168.88.140:3306/hm-item {"autoCommit":false}
+18:33:22:060  INFO 19452 --- [rpcDispatch_RMROLE_1_3_24] io.seata.rm.AbstractRMHandler            : Branch commit result: PhaseTwo_Committed
+18:33:36:588 DEBUG 19452 --- [http-nio-8081-exec-4] c.h.item.mapper.ItemMapper.selectById    : ==>  Preparing: SELECT id,name,price,stock,image,category,brand,spec,sold,comment_count,isAD,status,create_time,update_time,creater,updater FROM item WHERE id=?
+18:33:36:588 DEBUG 19452 --- [http-nio-8081-exec-4] c.h.item.mapper.ItemMapper.selectById    : ==> Parameters: 100002273484(Long)
+18:33:36:590 DEBUG 19452 --- [http-nio-8081-exec-4] c.h.item.mapper.ItemMapper.selectById    : <==      Total: 1
+18:33:36:595 DEBUG 19452 --- [http-nio-8081-exec-2] c.h.item.mapper.ItemMapper.updateById    : ==>  Preparing: UPDATE item SET name=?, price=?, stock=?, image=?, category=?, brand=?, spec=?, sold=?, comment_count=?, isAD=? WHERE id=?
+18:33:36:596 DEBUG 19452 --- [http-nio-8081-exec-2] c.h.item.mapper.ItemMapper.updateById    : ==> Parameters: 新秀丽铝框拉杆箱Samsonite男女行李箱旅行箱硬箱TRU-FRAME   25英寸 紫色I00*51002(String), 67900(Integer), 10002(Integer), https://m.360buyimg.com/mobilecms/s720x720_jfs/t1/15622/40/942/115673/5c0df843Eed114ae3/f443f063b74039cb.jpg!q70.jpg.webp(String), 拉杆箱(String), 新秀丽(String), {"颜色": "紫色"}(String), 0(Integer), 0(Integer), false(Boolean), 100002273484(Long)
+18:33:36:600 DEBUG 19452 --- [http-nio-8081-exec-2] c.h.item.mapper.ItemMapper.updateById    : <==    Updates: 1
+18:38:03:576 DEBUG 19452 --- [http-nio-8081-exec-8] c.h.i.m.ItemMapper.selectPage_mpCount    : ==>  Preparing: SELECT COUNT(*) AS total FROM item WHERE (status = ?)
+18:38:03:576 DEBUG 19452 --- [http-nio-8081-exec-8] c.h.i.m.ItemMapper.selectPage_mpCount    : ==> Parameters: 1(Integer)
+18:38:03:593 DEBUG 19452 --- [http-nio-8081-exec-8] c.h.i.m.ItemMapper.selectPage_mpCount    : <==      Total: 1
+18:38:03:596 DEBUG 19452 --- [http-nio-8081-exec-8] c.h.item.mapper.ItemMapper.selectPage    : ==>  Preparing: SELECT id, name, price, stock, image, category, brand, spec, sold, comment_count, isAD, status, create_time, update_time, creater, updater FROM item WHERE (status = ?) ORDER BY update_time DESC LIMIT ?
+18:38:03:596 DEBUG 19452 --- [http-nio-8081-exec-8] c.h.item.mapper.ItemMapper.selectPage    : ==> Parameters: 1(Integer), 20(Long)
+18:38:03:600 DEBUG 19452 --- [http-nio-8081-exec-8] c.h.item.mapper.ItemMapper.selectPage    : <==      Total: 20
+18:38:05:596 DEBUG 19452 --- [http-nio-8081-exec-9] c.h.i.mapper.ItemMapper.selectBatchIds   : ==>  Preparing: SELECT id,name,price,stock,image,category,brand,spec,sold,comment_count,isAD,status,create_time,update_time,creater,updater FROM item WHERE id IN ( ? )
+18:38:05:596 DEBUG 19452 --- [http-nio-8081-exec-9] c.h.i.mapper.ItemMapper.selectBatchIds   : ==> Parameters: 100002273484(Long)
+18:38:05:599 DEBUG 19452 --- [http-nio-8081-exec-9] c.h.i.mapper.ItemMapper.selectBatchIds   : <==      Total: 1
+18:38:21:227 DEBUG 19452 --- [http-nio-8081-exec-10] c.h.i.mapper.ItemMapper.selectBatchIds   : ==>  Preparing: SELECT id,name,price,stock,image,category,brand,spec,sold,comment_count,isAD,status,create_time,update_time,creater,updater FROM item WHERE id IN ( ? )
+18:38:21:227 DEBUG 19452 --- [http-nio-8081-exec-10] c.h.i.mapper.ItemMapper.selectBatchIds   : ==> Parameters: 100002273484(Long)
+18:38:21:229 DEBUG 19452 --- [http-nio-8081-exec-10] c.h.i.mapper.ItemMapper.selectBatchIds   : <==      Total: 1
+18:38:21:309 DEBUG 19452 --- [http-nio-8081-exec-1] c.h.item.mapper.ItemMapper.updateStock   : ==>  Preparing: UPDATE item SET stock = stock - ? WHERE id = ?
+18:38:21:309 DEBUG 19452 --- [http-nio-8081-exec-1] c.h.item.mapper.ItemMapper.updateStock   : ==> Parameters: 1(Integer), 100002273484(Long)
+18:38:22:063  INFO 19452 --- [rpcDispatch_RMROLE_1_4_24] i.s.c.r.p.c.RmBranchCommitProcessor      : rm client handle branch commit process:xid=192.168.88.140:8099:45586199005516050,branchId=45586199005516054,branchType=AT,resourceId=jdbc:mysql://192.168.88.140:3306/hm-item,applicationData={"autoCommit":false}
+18:38:22:063  INFO 19452 --- [rpcDispatch_RMROLE_1_4_24] io.seata.rm.AbstractRMHandler            : Branch committing: 192.168.88.140:8099:45586199005516050 45586199005516054 jdbc:mysql://192.168.88.140:3306/hm-item {"autoCommit":false}
+18:38:22:063  INFO 19452 --- [rpcDispatch_RMROLE_1_4_24] io.seata.rm.AbstractRMHandler            : Branch commit result: PhaseTwo_Committed
+18:38:36:370 DEBUG 19452 --- [http-nio-8081-exec-3] c.h.item.mapper.ItemMapper.selectById    : ==>  Preparing: SELECT id,name,price,stock,image,category,brand,spec,sold,comment_count,isAD,status,create_time,update_time,creater,updater FROM item WHERE id=?
+18:38:36:370 DEBUG 19452 --- [http-nio-8081-exec-3] c.h.item.mapper.ItemMapper.selectById    : ==> Parameters: 100002273484(Long)
+18:38:36:372 DEBUG 19452 --- [http-nio-8081-exec-3] c.h.item.mapper.ItemMapper.selectById    : <==      Total: 1
+18:38:36:377 DEBUG 19452 --- [http-nio-8081-exec-4] c.h.item.mapper.ItemMapper.updateById    : ==>  Preparing: UPDATE item SET name=?, price=?, stock=?, image=?, category=?, brand=?, spec=?, sold=?, comment_count=?, isAD=? WHERE id=?
+18:38:36:378 DEBUG 19452 --- [http-nio-8081-exec-4] c.h.item.mapper.ItemMapper.updateById    : ==> Parameters: 新秀丽铝框拉杆箱Samsonite男女行李箱旅行箱硬箱TRU-FRAME   25英寸 紫色I00*51002(String), 67900(Integer), 10000(Integer), https://m.360buyimg.com/mobilecms/s720x720_jfs/t1/15622/40/942/115673/5c0df843Eed114ae3/f443f063b74039cb.jpg!q70.jpg.webp(String), 拉杆箱(String), 新秀丽(String), {"颜色": "紫色"}(String), 0(Integer), 0(Integer), false(Boolean), 100002273484(Long)
+18:38:36:382 DEBUG 19452 --- [http-nio-8081-exec-4] c.h.item.mapper.ItemMapper.updateById    : <==    Updates: 1
