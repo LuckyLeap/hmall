@@ -2,7 +2,7 @@ package com.hmall.trade.service.Impl;
 
 
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
-import com.hmall.api.client.CartClient;
+import com.hmall.api.Constants.CartClearMqConstants;
 import com.hmall.api.client.ItemClient;
 import com.hmall.api.dto.ItemDTO;
 import com.hmall.api.dto.OrderDetailDTO;
@@ -17,12 +17,19 @@ import com.hmall.trade.service.IOrderDetailService;
 import com.hmall.trade.service.IOrderService;
 import io.seata.spring.annotation.GlobalTransactional;
 import lombok.RequiredArgsConstructor;
+import lombok.extern.slf4j.Slf4j;
+import org.springframework.amqp.AmqpException;
+import org.springframework.amqp.core.Message;
+import org.springframework.amqp.core.MessagePostProcessor;
 import org.springframework.amqp.rabbit.core.RabbitTemplate;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
 import java.time.LocalDateTime;
-import java.util.*;
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Map;
+import java.util.Set;
 import java.util.stream.Collectors;
 
 /**
@@ -35,11 +42,12 @@ import java.util.stream.Collectors;
  */
 @Service
 @RequiredArgsConstructor
+@Slf4j
 public class OrderServiceImpl extends ServiceImpl<OrderMapper, Order> implements IOrderService {
 
     private final ItemClient itemClient;
     private final IOrderDetailService detailService;
-    private final CartClient cartClient;
+//    private final CartClient cartClient;
     private final OrderMapper orderMapper;
     private final RabbitTemplate rabbitTemplate;
     @Override
@@ -77,7 +85,26 @@ public class OrderServiceImpl extends ServiceImpl<OrderMapper, Order> implements
         detailService.saveBatch(details);
 
         // 3.清理购物车商品
-        cartClient.removeByItemIds(itemIds);
+//        cartClient.removeByItemIds(itemIds);
+
+        // 3.1发送清理购物车商品的消息
+
+        rabbitTemplate.convertAndSend(
+                CartClearMqConstants.ClearCart_EXCHANGE_NAME,
+                CartClearMqConstants.ClearCart_ROUTING_KEY,
+                itemIds,
+                new MessagePostProcessor() {
+                    @Override
+                    public Message postProcessMessage(Message message) throws AmqpException {
+                        Long userId = UserContext.getUser();
+                        log.info("清理购物车商品消息发送成功，用户id：{}", userId);
+                        message.getMessageProperties().setHeader("userId",userId);
+                        return message;
+                    }
+                }
+        );
+
+
 
         // 4.扣减库存
         try {

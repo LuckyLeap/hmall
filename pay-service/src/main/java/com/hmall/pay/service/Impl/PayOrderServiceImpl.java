@@ -3,6 +3,7 @@ package com.hmall.pay.service.Impl;
 import com.baomidou.mybatisplus.core.toolkit.IdWorker;
 import com.baomidou.mybatisplus.core.toolkit.StringUtils;
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
+import com.hmall.api.client.Tradeclient;
 import com.hmall.api.client.UserClient;
 import com.hmall.common.exception.BizIllegalException;
 import com.hmall.common.utils.BeanUtils;
@@ -36,7 +37,7 @@ public class PayOrderServiceImpl extends ServiceImpl<PayOrderMapper, PayOrder> i
 
     private final UserClient userClient;
     private final RabbitTemplate rabbitTemplate;
-//    private final Tradeclient tradeclient;
+    private final Tradeclient tradeclient;
 
     @Override
     public String applyPayOrder(PayApplyDTO applyDTO) {
@@ -64,12 +65,12 @@ public class PayOrderServiceImpl extends ServiceImpl<PayOrderMapper, PayOrder> i
             throw new BizIllegalException("交易已支付或关闭！");
         }
         // 5.修改订单状态
-//        tradeclient.markOrderPaySuccess(po.getBizOrderNo());
-//        try {
-//            rabbitTemplate.convertAndSend("pay.direct", "pay.success", po.getBizOrderNo());
-//        } catch (Exception e) {
-//            log.error("支付成功的消息发送失败，支付单id：{}， 交易单id：{}", po.getId(), po.getBizOrderNo(), e);
-//        }
+        tradeclient.markOrderPaySuccess(po.getBizOrderNo());
+        try {
+            rabbitTemplate.convertAndSend("pay.direct", "pay.success", po.getBizOrderNo());
+        } catch (Exception e) {
+            log.error("支付成功的消息发送失败，支付单id：{}， 交易单id：{}", po.getId(), po.getBizOrderNo(), e);
+        }
     }
 
     public boolean markPayOrderSuccess(Long id, LocalDateTime successTime) {

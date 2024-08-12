@@ -16,6 +16,7 @@ import com.hmall.common.utils.BeanUtils;
 import com.hmall.common.utils.CollUtils;
 import com.hmall.common.utils.UserContext;
 import lombok.RequiredArgsConstructor;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
@@ -36,6 +37,7 @@ import java.util.stream.Collectors;
  */
 @Service
 @RequiredArgsConstructor
+@Slf4j
 public class CartServiceImpl extends ServiceImpl<CartMapper, Cart> implements ICartService {
 //    private final DiscoveryClient discoveryClient;
 //    private final RestTemplate restTemplate;
@@ -129,6 +131,7 @@ public class CartServiceImpl extends ServiceImpl<CartMapper, Cart> implements IC
     public void removeByItemIds(Collection<Long> itemIds) {
         // 1.构建删除条件，userId和itemId
         QueryWrapper<Cart> queryWrapper = new QueryWrapper<Cart>();
+        log.info("当前用户消息: {}", UserContext.getUser());
         queryWrapper.lambda()
                 .eq(Cart::getUserId, UserContext.getUser())
                 .in(Cart::getItemId, itemIds);
