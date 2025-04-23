@@ -1,8 +1,10 @@
 package com.hmall.trade.controller;
 
+import com.hmall.api.po.Order;
 import com.hmall.common.utils.BeanUtils;
 import com.hmall.trade.domain.dto.OrderFormDTO;
 import com.hmall.trade.domain.vo.OrderVO;
+import com.hmall.trade.mapper.OrderMapper;
 import com.hmall.trade.service.IOrderService;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiImplicitParam;
@@ -17,7 +19,7 @@ import org.springframework.web.bind.annotation.*;
 @RequiredArgsConstructor
 public class OrderController {
     private final IOrderService orderService;
-//    private final OrderMapper orderMapper;
+    private final OrderMapper orderMapper;
     @ApiOperation("根据id查询订单")
     @GetMapping("{id}")
     public OrderVO queryOrderById(@Param ("订单id")@PathVariable("id") Long orderId) {
@@ -36,9 +38,9 @@ public class OrderController {
     public void markOrderPaySuccess(@PathVariable("orderId") Long orderId) {
         orderService.markOrderPaySuccess(orderId);
     }
-//
-//    @PutMapping("/update")
-//    public void updateById(@RequestBody Order order) {
-//        orderMapper.updateById(order);
-//    }
+
+    @PutMapping("/update")
+    public void updateById(@RequestBody Order order) {
+        orderMapper.updateById(order);
+    }
 }

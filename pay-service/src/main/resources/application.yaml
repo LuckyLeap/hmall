@@ -12,9 +12,9 @@ spring:
     password: ${hm.db.pw}
   cloud:
     nacos:
-      server-addr: 192.168.88.140:8848
+      server-addr: 192.168.190.128:8848
   rabbitmq:
-    host: 192.168.88.140 # 你的虚拟机IP
+    host: 192.168.190.128 # 你的虚拟机IP
     port: 5672 # 端口
     virtual-host: /hmall # 虚拟主机
     username: hmall # 用户名

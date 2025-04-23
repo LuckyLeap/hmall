@@ -118,6 +118,4 @@ public class PayOrder implements Serializable {
      * 逻辑删除
      */
     private Boolean isDelete;
-
-
 }

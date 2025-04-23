@@ -72,6 +72,4 @@ public class Address implements Serializable {
      * 备注
      */
     private String notes;
-
-
 }

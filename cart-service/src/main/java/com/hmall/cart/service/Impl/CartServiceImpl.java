@@ -39,8 +39,7 @@ import java.util.stream.Collectors;
 @RequiredArgsConstructor
 @Slf4j
 public class CartServiceImpl extends ServiceImpl<CartMapper, Cart> implements ICartService {
-//    private final DiscoveryClient discoveryClient;
-//    private final RestTemplate restTemplate;
+
     private final CartProperties cartProperties;
     private final ItemClient itemClient;
     @Override
@@ -130,7 +129,7 @@ public class CartServiceImpl extends ServiceImpl<CartMapper, Cart> implements IC
     @Transactional
     public void removeByItemIds(Collection<Long> itemIds) {
         // 1.构建删除条件，userId和itemId
-        QueryWrapper<Cart> queryWrapper = new QueryWrapper<Cart>();
+        QueryWrapper<Cart> queryWrapper = new QueryWrapper<>();
         log.info("当前用户消息: {}", UserContext.getUser());
         queryWrapper.lambda()
                 .eq(Cart::getUserId, UserContext.getUser())
@@ -140,17 +139,21 @@ public class CartServiceImpl extends ServiceImpl<CartMapper, Cart> implements IC
     }
 
     private void checkCartsFull(Long userId) {
-        Long count = Long.valueOf(lambdaQuery().eq(Cart::getUserId, userId).count());
+        // 校验 cartProperties.getMaxAmount() 的合法性
+        if (cartProperties.getMaxAmount() == null || cartProperties.getMaxAmount() <= 0) {
+            throw new IllegalStateException("最大购物车数量未正确配置");
+        }
+
+        long count = lambdaQuery().eq(Cart::getUserId, userId).count();
         if (count >= cartProperties.getMaxAmount()) {
             throw new BizIllegalException(StrUtil.format("用户购物车数量不能超过{}", cartProperties.getMaxAmount()));
         }
     }
 
     private boolean checkItemExists(Long itemId, Long userId) {
-        Long count = Long.valueOf(lambdaQuery()
+        return lambdaQuery()
                 .eq(Cart::getUserId, userId)
                 .eq(Cart::getItemId, itemId)
-                .count());
-        return count > 0;
+                .exists();
     }
 }

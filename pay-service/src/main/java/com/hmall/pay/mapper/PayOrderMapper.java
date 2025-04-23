@@ -13,5 +13,4 @@ import com.hmall.pay.domain.po.PayOrder;
  * @since 2023-05-16
  */
 public interface PayOrderMapper extends BaseMapper<PayOrder> {
-
 }

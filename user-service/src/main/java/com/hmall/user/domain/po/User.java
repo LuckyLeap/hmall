@@ -61,6 +61,4 @@ public class User implements Serializable {
      * 账户余额
      */
     private Integer balance;
-
-
 }

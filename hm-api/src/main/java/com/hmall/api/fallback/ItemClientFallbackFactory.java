@@ -38,8 +38,6 @@ public class ItemClientFallbackFactory implements FallbackFactory<ItemClient> {
                 log.error("查询商品服务失败", cause);
                 return null;
             }
-
-
         };
     }
 }

@@ -104,8 +104,6 @@ public class OrderServiceImpl extends ServiceImpl<OrderMapper, Order> implements
                 }
         );
 
-
-
         // 4.扣减库存
         try {
             itemClient.deductStock(detailDTOS);

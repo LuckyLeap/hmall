@@ -39,5 +39,4 @@ public class CartVO {
     private String image;
     @ApiModelProperty("创建时间")
     private LocalDateTime createTime;
-
 }
