@@ -1,5 +1,15 @@
 server:
   port: 8085
+spring:
+  application:
+    name: trade-service # 服务名称
+  profiles:
+    active: dev
+  datasource:
+    url: jdbc:mysql://${hm.db.host}:3306/hm-trade?useUnicode=true&characterEncoding=UTF-8&autoReconnect=true&serverTimezone=Asia/Shanghai
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    username: root
+    password: ${hm.db.pw}
 hm:
   swagger:
     title: 交易服务接口文档
