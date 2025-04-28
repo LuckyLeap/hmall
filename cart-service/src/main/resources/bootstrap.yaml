@@ -1,8 +1,8 @@
 spring:
   application:
     name: cart-service # 服务名称
-  profiles:
-    active: dev
+    profiles:
+      active: dev
   cloud:
     nacos:
       server-addr: 192.168.190.128:8848 # nacos地址
@@ -14,3 +14,4 @@ spring:
           - dataId: shared-swagger.yaml # 共享日志配置
           - dataId: shared-seata.yaml # 共享seata配置
           - dataId: shared-MQ.yaml # 共享MQ配置
+            refresh: true
